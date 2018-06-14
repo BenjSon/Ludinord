@@ -1,19 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="salles.css">
-	<meta charset="utf-8">
-	<title>graphe</title>
-</head>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<style type="text/css">
+.bordure{
+	fill:white;
+	stroke: black;
+	stroke-width:3px;
+	margin-top: 100px;
+}
 
-<body>
+#axetemps{
+	text-anchor: end;
+	baseline-shift: -0.5ex;
+}
+#axenombre{
+	text-anchor: end;
+	baseline-shift: -0.5ex
+}
+path{
+	fill:transparent;
+	stroke: blue;
+}
+</style>
 
-	<div id="graphe">
-		
-	</div>
 
-</body>
-<script type="text/javascript">
-	
-</script>
-</html>
+<svg style=" width:100%; height:100%; margin-top:20%; margin-left: auto; margin-right: auto;">
+	<rect x="70" y="0" width="700" height="400" class="bordure"/>
+	<g id="axetemps">	
+		<text x="70" y="420" id="horaires1">0</text>
+		<text x="150" y="420" id="horaires2">echo</text>
+		<text x="250" y="420" id="horaires3">echo</text>
+		<text x="350" y="420" id="horaires4">echo</text>
+		<text x="450" y="420" id="horaires5">echo</text>
+		<text x="550" y="420" id="horaires6">echo</text>
+		<text x="650" y="420" id="horaires7">echo</text>
+		<text x="750" y="420" id="horaires8">maintenant</text>
+	</g>
+	<g id="axenombre">	
+		<text x="60" y="20" id="horaires1">100</text>
+		<text x="60" y="80" id="horaires2">echo</text>
+		<text x="60" y="160" id="horaires3">echo</text>
+		<text x="60" y="220" id="horaires4">echo</text>
+		<text x="60" y="280" id="horaires5">echo</text>
+		<text x="60" y="340" id="horaires6">echo</text>
+		<text x="60" y="400" id="horaires7">0</text>
+	</g>
+	<path d="M 70 400 L 150 150 L 250 300"
+
+</svg>

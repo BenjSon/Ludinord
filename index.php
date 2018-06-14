@@ -2,31 +2,37 @@
 	<meta charset="utf-8">
 	<title>Fédéjeux</title>
 	<link rel="shortcut icon" href="logo-fedejeux.png">
+	<link rel="stylesheet" type="text/css" href="menu.css">
 
 </head>
 
 
 <?php
 
+if(isset($_GET['view'])){
+	$view = $_GET['view'];
+	}else{$view="connexion";}
 
-$view = $_GET['view'];
 switch($view)
 	{		
 
 		case "menu" : 
-			include("./salles.html");
+			include("./menu.html");
 		break;
 
 		case "fort" : 
-			include("./graphe.html?vue=fort");
+			echo("<div class='titregraphe'>Nombre de personnes dans le fort</div>");
+			include("./graphe.html");
 		break; 
 
 		case "montaigne" : 
-			include("./graphe.html?vue=montaigne");
+			echo("<div class='titregraphe'>Nombre de personnes dans la salle Montaigne</div>");
+			include("./graphe.html");
 		break;
 
 		case "chapiteau":
-			include("./graphe.html?vue=montaigne");
+			echo("<div class='titregraphe'>Nombre de personnes dans le chapiteau</div>");
+			include("./graphe.html");
 		break;
 
 		case "connexion":
@@ -34,6 +40,7 @@ switch($view)
 		break;
 
 	}
+
 //if (!($_SESSION['etat']=='connected'))
 //	include("connexion.html")
 

@@ -1,4 +1,6 @@
 <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./graphe_jquery.js"></script>
 <style type="text/css">
 .bordure{
 	fill:white;
@@ -15,12 +17,17 @@
 	text-anchor: end;
 	baseline-shift: -0.5ex
 }
-path{
+#courbe{
 	fill:transparent;
 	stroke: blue;
 }
-</style>
 
+#max{
+	fill:transparent;
+	stroke: lightgrey;
+	stroke-width:100px;
+}
+</style>
 
 <svg style=" width:100%; height:100%; margin-top:20%; margin-left: auto; margin-right: auto;">
 	<rect x="70" y="0" width="700" height="400" class="bordure"/>
@@ -32,17 +39,20 @@ path{
 		<text x="450" y="420" id="horaires5">echo</text>
 		<text x="550" y="420" id="horaires6">echo</text>
 		<text x="650" y="420" id="horaires7">echo</text>
-		<text x="750" y="420" id="horaires8">maintenant</text>
+		<text x="800" y="420" id="horaires8">maintenant</text>
 	</g>
 	<g id="axenombre">	
-		<text x="60" y="20" id="horaires1">100</text>
-		<text x="60" y="80" id="horaires2">echo</text>
-		<text x="60" y="160" id="horaires3">echo</text>
-		<text x="60" y="220" id="horaires4">echo</text>
-		<text x="60" y="280" id="horaires5">echo</text>
-		<text x="60" y="340" id="horaires6">echo</text>
-		<text x="60" y="400" id="horaires7">0</text>
+		<text x="60" y="20" id="nbr1">1200</text>
+		<text x="60" y="80" id="nbr2">1000</text>
+		<text x="60" y="160" id="nbr3">800</text>
+		<text x="60" y="220" id="nbr4">600</text>
+		<text x="60" y="280" id="nbr5">400</text>
+		<text x="60" y="340" id="nbr6">200</text>
+		<text x="60" y="400" id="nbr7">0</text>
 	</g>
-	<path d="M 70 400 L 150 150 L 250 300"
+	<path id="max" d="M 70 52 L 770 52"/>
+	<path id="courbe" d=""/>
+
+	
 
 </svg>

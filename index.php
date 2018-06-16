@@ -30,12 +30,12 @@ switch($view)
 			include("./graphe.html");
 		break;
 
-		case "chapiteau":
+		case "chapiteau" :
 			echo("<div class='titregraphe'>Nombre de personnes dans le chapiteau</div>");
 			include("./graphe.html");
 		break;
 
-		case "connexion":
+		case "connexion" :
 			include("./connexion.html");
 		break;
 

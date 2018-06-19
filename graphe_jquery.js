@@ -1,8 +1,21 @@
-data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800]];
+var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
+
+//$(document).ready(function(){
+	//$("#test").load("data.txt");
+//});
 //on vient de simuler une base de donnée
+var nbrmax=900;
+
 taille=data.length;
 var chemin="M 70 400" ;
 var duree= data[taille-1][0];
+var now= data[taille-1][1];
+if (now>nbrmax) {
+	$(document).ready(function(){
+		$("#fort").css('background-color', 'red');
+
+	});
+}
 
 var somme_t=0;
 var somme_n=0;
@@ -16,6 +29,7 @@ for(var point in data){
 		
 	}
 console.log(chemin);
+
 $(document).ready(function(){
 	//calcul des temps à afficher sur le graphe.
 

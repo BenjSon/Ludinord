@@ -1,8 +1,6 @@
 var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
 
-//$(document).ready(function(){
-	//$("#test").load("data.txt");
-//});
+
 //on vient de simuler une base de donnée
 var nbrmax=900;
 
@@ -11,8 +9,9 @@ var chemin="M 70 400" ;
 var duree= data[taille-1][0];
 var now= data[taille-1][1];
 if (now>nbrmax) {
+	console.log(now);
 	$(document).ready(function(){
-		$("#fort").css('background-color', 'red');
+		$("#fort").css("background-color", "red");
 
 	});
 }
@@ -33,12 +32,12 @@ console.log(chemin);
 $(document).ready(function(){
 	//calcul des temps à afficher sur le graphe.
 
-	temps2= (duree/7).toString() +'s';
-	temps3= (2*duree/7).toString()+'s';
-	temps4= (3*duree/7).toString()+'s';
-	temps5= (4*duree/7).toString()+'s';
-	temps6= (5*duree/7).toString()+'s';
-	temps7= (6*duree/7).toString()+'s';
+	temps2= (duree/7).toString().substring(0,5) +'s';
+	temps3= (2*duree/7).toString().substring(0,5)+'s';
+	temps4= (3*duree/7).toString().substring(0,5)+'s';
+	temps5= (4*duree/7).toString().substring(0,5)+'s';
+	temps6= (5*duree/7).toString().substring(0,5)+'s';
+	temps7= (6*duree/7).toString().substring(0,5)+'s';
 	$('#horaires2').html(temps2);
 	$('#horaires3').html(temps3);
 	$('#horaires4').html(temps4);

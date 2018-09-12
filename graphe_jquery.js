@@ -4,34 +4,24 @@
 // console.log(req);
 
 var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
-//var data=[[0]];
-// var madata = new XMLHttpRequest();
-// 	madata.open("GET", "controlGraph.php", false);
-// 	//madata.responseType = 'json';
-// 	madata.send();
-// 	data= madata.response;
-// 	console.log(data);
-// 	console.log(madata);
-// 	data = JSON.parse(data);
 
-var variableRecuperee = document.getElementById(variableAPasser).value;
-console.log(variableRecuperee);
+
+//var variableRecuperee = document.getElementById(variableAPasser).value;
+//console.log(variableRecuperee);
 
 //on vient de simuler une base de donnée
 var nbrmax=900;
-
 taille=data.length;
-var chemin="M 70 400" ;
-var duree= data[taille-1][0];
 var now= data[taille-1][1];
 if (now>nbrmax) {
-	console.log(now);
 	$(document).ready(function(){
 		$("#fort").css("background-color", "red");
 
  	});
 }
 
+var duree= data[taille-1][0];
+var chemin="M 70 400" ;
 var somme_t=0;
 var somme_n=0;
 for(var point in data){
@@ -60,9 +50,7 @@ $(document).ready(function(){
 	$('#horaires5').html(temps5);
 	$('#horaires6').html(temps6);
 	$('#horaires7').html(temps7);
-	//détermination du path de la courbe:
-	//chemin="M 70 400 L 150 250 L 270 300 L 770 "+ positionfin ;
-	//console.log(chemin);
+	
 	$('#courbe').attr("d",chemin);
 		
 })

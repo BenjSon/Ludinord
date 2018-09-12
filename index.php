@@ -8,6 +8,9 @@
 
 
 <?php
+include_once "libsSQL.php";
+include_once "maLibForms.php";
+
 
 if(isset($_GET['view'])){
 	$view = $_GET['view'];
@@ -22,17 +25,17 @@ switch($view)
 
 		case "fort" : 
 			echo("<div class='titregraphe'>Nombre de personnes dans le fort</div>");
-			include("./graphe.html");
+			include("./controlGraph.php");
 		break; 
 
 		case "montaigne" : 
 			echo("<div class='titregraphe'>Nombre de personnes dans la salle Montaigne</div>");
-			include("./graphe.html");
+			include("./controlGraph.php");
 		break;
 
 		case "chapiteau" :
 			echo("<div class='titregraphe'>Nombre de personnes dans le chapiteau</div>");
-			include("./graphe.html");
+			include("./controlGraph.php");
 		break;
 
 		case "connexion" :
@@ -40,6 +43,9 @@ switch($view)
 		break;
 
 	}
+//$test= donnees("fort");
+//mkTable($test);
+
 
 //if (!($_SESSION['etat']=='connected'))
 //	include("connexion.html")

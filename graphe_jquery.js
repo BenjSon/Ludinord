@@ -1,5 +1,21 @@
-var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
+// var req = new XMLHttpRequest();
+// req.open("GET","./dataSQL.php", false);
+// req.send(null);
+// console.log(req);
 
+var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
+//var data=[[0]];
+// var madata = new XMLHttpRequest();
+// 	madata.open("GET", "controlGraph.php", false);
+// 	//madata.responseType = 'json';
+// 	madata.send();
+// 	data= madata.response;
+// 	console.log(data);
+// 	console.log(madata);
+// 	data = JSON.parse(data);
+
+var variableRecuperee = document.getElementById(variableAPasser).value;
+console.log(variableRecuperee);
 
 //on vient de simuler une base de donnée
 var nbrmax=900;
@@ -13,7 +29,7 @@ if (now>nbrmax) {
 	$(document).ready(function(){
 		$("#fort").css("background-color", "red");
 
-	});
+ 	});
 }
 
 var somme_t=0;

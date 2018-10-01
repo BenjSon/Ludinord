@@ -1,5 +1,19 @@
+var config = {
+	            apiKey: "AIzaSyDkoMLFMo_eB7X7dn2EbU6uF4wdj5_zbLM",
+	            authDomain: "projet-21bb6.firebaseapp.com",
+	            databaseURL: "https://projet-21bb6.firebaseio.com",
+	            projectId: "projet-21bb6",
+	            storageBucket: "projet-21bb6.appspot.com",
+	            messagingSenderId: "257142514429"
+	        };
+	        firebase.initializeApp(config);
 
-var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
+	        var count = document.getElementById('count');
+	        var dbRef = firebase.database().ref().child('count');
+	        dbRef.on('value', snap => count.innerText = 'Real time count number : ' + snap.val());
+	        var data= snap.val();
+
+// var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
 
 
 //on vient de simuler une base de donnée

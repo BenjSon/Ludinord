@@ -10,11 +10,11 @@ var config = {
 
 	        var count = document.getElementById('count');
 	        var dbRef = firebase.database().ref().child('count');
-	        dbRef.on('value', snap => count.innerText = 'Real time count number : ' + snap.val());
-	        var databis= 800;//dbRef.on('value', snap => count.innerText=snap.val());
-	        console.log(databis);
+	        // dbRef.on('value', snap => count.innerText = 'Real time count number : ' + snap.val());
+	        var data= snap.val();
 
-if(databis>800){
+
+if(data<800){
 	$(document).ready(function(){
 		$('#fort').css("background-color","#FFA500");
 	})

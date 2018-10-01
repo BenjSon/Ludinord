@@ -3,10 +3,7 @@
 	<title>Fédéjeux</title>
 	<link rel="shortcut icon" href="logo-fedejeux.png">
 	<link rel="stylesheet" type="text/css" href="menu.css">
-
 </head>
-
-
 <?php
 include_once "libsSQL.php";
 include_once "maLibForms.php";

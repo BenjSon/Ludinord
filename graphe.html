@@ -8,7 +8,9 @@
 	stroke-width:3px;
 	margin-top: 100px;
 }
-
+#nodata{
+	font-size: 19px;
+}
 #axetemps{
 	text-anchor: end;
 	baseline-shift: -0.5ex;
@@ -25,7 +27,12 @@
 #max{
 	fill:transparent;
 	stroke: rgba(255, 69, 0, 50);
-	stroke-width:100px;
+	stroke-width:3px;
+}
+#warning{
+	fill:transparent;
+	stroke: #FFA500;
+	stroke-width:3px;
 }
 </style>
 
@@ -50,7 +57,11 @@
 		<text x="60" y="340" id="nbr6">200</text>
 		<text x="60" y="400" id="nbr7">0</text>
 	</g>
-	<path id="max" d="M 70 52 L 770 52"/>
+	<g>
+		<text x="300" y="280" id="nodata">Aucune donnée disponible</text>
+	</g>
+	<path id="max" d="M 70 80 L 770 80"/>
+	<path id="warning" d="M 70 160 L 770 160"/>
 	<path id="courbe" d=""/>
 
 	

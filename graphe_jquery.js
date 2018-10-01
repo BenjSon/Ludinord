@@ -1,26 +1,11 @@
-// var req = new XMLHttpRequest();
-// req.open("GET","./dataSQL.php", false);
-// req.send(null);
-// console.log(req);
 
 var data=[[0,5],[10,100],[20,0],[30,300],[40,100],[70,800],[90,500],[100,1000]];
 
 
-//var variableRecuperee = document.getElementById(variableAPasser).value;
-//console.log(variableRecuperee);
-
 //on vient de simuler une base de donnée
-var nbrmax=900;
-taille=data.length;
-var now= data[taille-1][1];
-if (now>nbrmax) {
-	$(document).ready(function(){
-		$("#fort").css("background-color", "red");
 
- 	});
-}
-
-var duree= data[taille-1][0];
+var taille = data.length;
+var duree = data[taille-1][0];
 var chemin="M 70 400" ;
 var somme_t=0;
 var somme_n=0;
@@ -35,9 +20,10 @@ for(var point in data){
 	}
 console.log(chemin);
 
+
 $(document).ready(function(){
 	//calcul des temps à afficher sur le graphe.
-
+	$('#nodata').hide();
 	temps2= (duree/7).toString().substring(0,5) +'s';
 	temps3= (2*duree/7).toString().substring(0,5)+'s';
 	temps4= (3*duree/7).toString().substring(0,5)+'s';
@@ -54,3 +40,9 @@ $(document).ready(function(){
 	$('#courbe').attr("d",chemin);
 		
 })
+
+
+
+
+
+

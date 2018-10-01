@@ -6,7 +6,8 @@
 	<title>Fédéjeux</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./graphe_jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script src="./menu_jquery.js"></script>
 <body>
 <h2>Choisissez votre salle:</h2>
 
@@ -14,8 +15,8 @@
 <div id="blocboutons">
 
 	<img src="./ressources/fort.jpg" id="logo1">
-	<div class="bouton" id="fort" onclick="affichergraphe('fort')">	
-		Salle du Fort
+	<div class="bouton" id="fort" id="count" onclick="affichergraphe('fort')">	
+		Salle du Fort(T5B)
 	</div>
 
 	<img src="./ressources/maison.jpg" id="logo2">

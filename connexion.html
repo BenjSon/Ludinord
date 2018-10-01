@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="connexion.css">
 	<meta charset="utf-8">
-	<title>Fédéjeux</title>
 </head>
 <body>
 	<div id="accueil">
-		<img src="ressources/logo-fedejeux.png">	
-		<p>Accéder au comptage en</p>
-		<p>temps réel des participants</p>
-		<p>du festival</p>
+		<img src="ressources/logo-fedejeux.png">
+		<div id="text">
+			<p>Accéder au comptage en</p>
+			<p>temps réel des participants</p>
+			<p>du festival</p>
+		</div>
 	</div>
 	<div id="connexion">
 		<div class="zonetext"> 
@@ -32,14 +32,11 @@
 		var identite = document.getElementById("login").value;
 		if (mdp=="mdp" & identite=="login") {
 			window.location = "index.php?view=menu";
-			$_SESSION['etat']='connected'
+			$_SESSION['etat']='connected';
 		}
 		if (!(mdp=="mdp" & identite=="login")) {
 			alert("Mot de passe ou Identifiant incorrecte");
 		}
 	}
-
-
-
 </script>
 </html>

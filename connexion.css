@@ -7,7 +7,9 @@
 	margin-left: 20%;
 	
 }
-#accueil>p{
+
+#text>p{
+	position: relative;
 	font-size: 40px;
 	font-family: sans-serif;
 	font-weight: bolder;
@@ -18,9 +20,14 @@
 	}
 
 #accueil>img{
+	position: absolute;
 	margin-bottom: 30px;
 	width: 600px;
-	height: 600px
+	height: 600px;
+}
+#text{
+	position: absolute;
+	margin-top: 600px;
 }
 
 #connexion{
